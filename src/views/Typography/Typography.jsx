@@ -1,6 +1,8 @@
 import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
+import GridItem from "components/Grid/GridItem.jsx";
+import GridContainer from "components/Grid/GridContainer.jsx";
 // core components
 import Quote from "components/Typography/Quote.jsx";
 import Muted from "components/Typography/Muted.jsx";
@@ -12,6 +14,13 @@ import Danger from "components/Typography/Danger.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
+
+import Button from "components/CustomButtons/Button.jsx";
+
+
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+
+import UserProfile from '../Cliente/Cliente.jsx'
 
 const style = {
   typo: {
@@ -52,6 +61,22 @@ const style = {
 function TypographyPage(props) {
   const { classes } = props;
   return (
+
+    
+    <GridContainer>
+    <GridItem xs={12} sm={12} md={12}>
+  <Router>
+    <Link to={`/cliente`}>
+    <Button  variant="fab" color="primary" aria-label="Add">
+      cliente
+    </Button>
+    <Route path="/cliente" component={UserProfile} />
+    </Link>
+  </Router>
+  </GridItem>
+
+
+
     <Card>
       <CardHeader color="primary">
         <h4 className={classes.cardTitleWhite}>Material Dashboard Heading</h4>
@@ -152,6 +177,7 @@ function TypographyPage(props) {
         </div>
       </CardBody>
     </Card>
+    </GridContainer>
   );
 }
 

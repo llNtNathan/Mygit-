@@ -1,6 +1,6 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
+
 // import ContentPaste from "@material-ui/icons/ContentPaste";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
@@ -14,8 +14,6 @@ import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
 
 
-import Botao from 'views/Botao/Botao.jsx'
-import CadastroCli from 'views/CadastroCli/CadastroCli.jsx'
 
 
 const dashboardRoutes = [
@@ -25,21 +23,6 @@ const dashboardRoutes = [
     navbarName: "Material Dashboard",
     icon: Dashboard,
     component: DashboardPage
-  },
-  {
-    path: "/CadastroCli",
-    sidebarName: "TesteCadastro",
-    navbarName: "Material Dashboard",
-    icon: Dashboard,
-    component: CadastroCli
-  },
-
-  {
-    path: "/Cadastrar",
-    sidebarName: "Cadastro",
-    navbarName: "Profile",
-    icon: Person,
-    component: Botao
   },
   {
     path: "/table",

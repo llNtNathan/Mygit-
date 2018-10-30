@@ -13,7 +13,6 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
-
 //import avatar from "assets/img/faces/marc.jpg";
 
 const styles = {
@@ -35,7 +34,7 @@ const styles = {
   }
 };
 
-function CadastroCli(props) {
+function UserProfile(props) {
   const { classes } = props;
   return (
     <div>
@@ -44,13 +43,13 @@ function CadastroCli(props) {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Cadastro</h4>
-              <p className={classes.cardCategoryWhite}>Cadastrar Produtos</p>
+              <p className={classes.cardCategoryWhite}>Cadastrar Cliente</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
-                    labelText="Produto"
+                    labelText="Primeiro Nome"
                     id="first-name"
                     formControlProps={{
                       fullWidth: true
@@ -59,7 +58,7 @@ function CadastroCli(props) {
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
-                    labelText="Preço"
+                    labelText="Sobrenome"
                     id="last-name"
                     formControlProps={{
                       fullWidth: true
@@ -68,19 +67,37 @@ function CadastroCli(props) {
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="Quantidade"
+                    labelText="Rua"
                     id="city"
                     formControlProps={{
                       fullWidth: true
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
-                    labelText="Marca"
+                    labelText="Bairro"
                     id="country"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={4}>
+                  <CustomInput
+                    labelText="Numero-casa"
+                    id="postal-code"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={7}>
+                  <CustomInput
+                    labelText="Numero-telefone"
+                    id="call"
                     formControlProps={{
                       fullWidth: true
                     }}
@@ -89,9 +106,7 @@ function CadastroCli(props) {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary">
-                Cadastrar
-              </Button>
+              <Button color="primary">Cadastrar</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -100,4 +115,4 @@ function CadastroCli(props) {
   );
 }
 
-export default withStyles(styles)(CadastroCli);
+export default withStyles(styles)(UserProfile);

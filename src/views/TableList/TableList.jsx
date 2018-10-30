@@ -8,6 +8,12 @@ import Table from "components/Table/Table.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
+import Button from "components/CustomButtons/Button.jsx";
+
+
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+
+import Cadastro from '../Cadastro/Cadastro'
 
 const styles = {
   cardCategoryWhite: {
@@ -42,7 +48,20 @@ const styles = {
 function TableList(props) {
   const { classes } = props;
   return (
+
     <GridContainer>
+      <GridItem xs={12} sm={12} md={12}>
+    <Router>
+      <Link to={`/Cadastro`}>
+      <Button  variant="fab" color="primary" aria-label="Add">
+        Produto
+      </Button>
+      <Route path="/Cadastro" component={Cadastro} />
+      </Link>
+    </Router>
+    </GridItem>
+
+
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
