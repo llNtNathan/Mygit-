@@ -9,11 +9,16 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from "components/CustomButtons/Button.jsx";
+import Search from "@material-ui/icons/Search";
 
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
+
+import CustomInput from "components/CustomInput/CustomInput.jsx";
+
 import Cadastro from '../Cadastro/Cadastro'
+
 
 const styles = {
   cardCategoryWhite: {
@@ -53,13 +58,33 @@ function TableList(props) {
       <GridItem xs={12} sm={12} md={12}>
     <Router>
       <Link to={`/Cadastro`}>
-      <Button  variant="fab" color="primary" aria-label="Add">
+      <Button color="primary">
         Produto
       </Button>
       <Route path="/Cadastro" component={Cadastro} />
       </Link>
     </Router>
+        <GridItem md={8}>
+          <div>
+            <CustomInput
+              formControlProps={{
+                className: classes.margin + " " + classes.search
+              }}
+              inputProps={{
+                placeholder: "Search",
+                inputProps: {
+                  "aria-label": "Search"
+                }
+              }}
+            />
+            <Button color="white" aria-label="edit" justIcon round>
+              <Search />
+            </Button>
+          </div>
+        </GridItem>
     </GridItem>
+
+
 
 
       <GridItem xs={12} sm={12} md={12}>

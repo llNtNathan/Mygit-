@@ -61,7 +61,7 @@ function TypographyPage(props) {
     <GridItem xs={12} sm={12} md={12}>
       <Router>
         <Link to={`/cliente`}>
-          <Button  variant="fab" color="primary" aria-label="Add">
+          <Button color="primary">
           cliente
           </Button>
           <Route path="/cliente" component={UserProfile} />
