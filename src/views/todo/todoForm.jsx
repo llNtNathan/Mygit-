@@ -24,10 +24,9 @@ export default props => {
                     placeholder='Adicione uma tarefa'
                     onChange={props.handleChange}
                     onKeyUp={keyHandler}
-                    value={props.description} md={3} />
+                    value={props.description} md={6} />
                 <Button color="primary"
                     onClick={props.handleAdd}>
-                    mui-
                 </Button>
                 <Button color="primary"
                     onClick={props.handleSearch}>
