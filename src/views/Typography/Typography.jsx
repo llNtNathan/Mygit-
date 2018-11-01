@@ -4,12 +4,13 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 // core components
-import Search from "@material-ui/icons/Search";
+//import Search from "@material-ui/icons/Search";
 
 import Button from "components/CustomButtons/Button.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+//import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 //import headerLinksStyle from "assets/jss/material-dashboard-react/components/headerLinksStyle.jsx";
+
 
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
@@ -53,12 +54,12 @@ const style = {
   }
 };
 function TypographyPage(props) {
-  const { classes } = props;
+  //const { classes } = props;
   return (
 
     
   <GridContainer>
-    <GridItem xs={12} sm={12} md={12}>
+   <GridItem xs={12} sm={12} md={12}>
       <Router>
         <Link to={`/cliente`}>
           <Button color="primary">
@@ -68,7 +69,7 @@ function TypographyPage(props) {
         </Link>
       </Router>
     </GridItem>
-    <GridItem md={8}>
+     {/*<GridItem md={8}>
       <div>
           <CustomInput
             formControlProps={{
@@ -85,7 +86,7 @@ function TypographyPage(props) {
             <Search />
           </Button>
         </div>
-      </GridItem>
+          </GridItem>*/}
   </GridContainer>
   );
 }

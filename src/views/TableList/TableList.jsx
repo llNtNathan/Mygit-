@@ -9,13 +9,12 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from "components/CustomButtons/Button.jsx";
-import Search from "@material-ui/icons/Search";
+
 
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 
-import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 import Cadastro from '../Cadastro/Cadastro'
 
@@ -50,8 +49,16 @@ const styles = {
   }
 };
 
+
 function TableList(props) {
   const { classes } = props;
+  /*const keyHandler = (e) => {
+    if(e.key === 'Enter'){
+        e.shiftKey ? props.handleSearch() : props.handleAdd()
+    } else if (e.key === 'Escape') {
+        props.handleClear()
+    }
+  }*/
   return (
 
     <GridContainer>
@@ -64,29 +71,7 @@ function TableList(props) {
       <Route path="/Cadastro" component={Cadastro} />
       </Link>
     </Router>
-        <GridItem md={8}>
-          <div>
-            <CustomInput
-              formControlProps={{
-                className: classes.margin + " " + classes.search
-              }}
-              inputProps={{
-                placeholder: "Search",
-                inputProps: {
-                  "aria-label": "Search"
-                }
-              }}
-            />
-            <Button color="white" aria-label="edit" justIcon round>
-              <Search />
-            </Button>
-          </div>
-        </GridItem>
     </GridItem>
-
-
-
-
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
