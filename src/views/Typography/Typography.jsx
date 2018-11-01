@@ -7,6 +7,10 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 //import Search from "@material-ui/icons/Search";
 
 import Button from "components/CustomButtons/Button.jsx";
+import CardBody from "components/Card/CardBody.jsx"; 
+import Card from "components/Card/Card.jsx";
+import CardHeader from "components/Card/CardHeader.jsx";
+import Todo from 'views/todo/todo.jsx';
 //import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 //import headerLinksStyle from "assets/jss/material-dashboard-react/components/headerLinksStyle.jsx";
@@ -54,7 +58,7 @@ const style = {
   }
 };
 function TypographyPage(props) {
-  //const { classes } = props;
+  const { classes } = props;
   return (
 
     
@@ -87,6 +91,16 @@ function TypographyPage(props) {
           </Button>
         </div>
           </GridItem>*/}
+        <GridItem md={12}>
+          <Card>
+            <CardHeader color="primary">
+              <h4 className={classes.cardTitleWhite}>procurar cliente</h4>
+            </CardHeader>
+            <CardBody>
+              <Todo />
+            </CardBody>
+          </Card>
+        </GridItem>
   </GridContainer>
   );
 }

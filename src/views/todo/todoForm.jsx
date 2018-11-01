@@ -1,6 +1,7 @@
 import React from 'react'
 //import Grid from 'views/template/grid'
 import Grid from "@material-ui/core/Grid";
+import 'views/template/custom.css'
 //import IconButton from 'views/template/iconButton'
 import Button from "components/CustomButtons/Button.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
@@ -18,13 +19,13 @@ export default props => {
     }
 
     return (
-        <div>
+        <div className='todoForm'>
             <Grid>
                 <CustomInput id='description' className='form-control'
                     placeholder='Adicione uma tarefa'
                     onChange={props.handleChange}
                     onKeyUp={keyHandler}
-                    value={props.description} md={6} />
+                    value={props.description} />
                 <Button color="primary"
                     onClick={props.handleAdd}>
                 </Button>

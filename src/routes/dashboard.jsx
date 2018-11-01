@@ -35,7 +35,7 @@ const dashboardRoutes = [
   {
     path: "/typography",
     sidebarName: "Typography",
-    navbarName: "Typography",
+    navbarName: "Typograph",
     icon: LibraryBooks,
     component: Typography
   },
