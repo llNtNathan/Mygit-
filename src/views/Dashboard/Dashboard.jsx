@@ -196,6 +196,11 @@ class Dashboard extends React.Component {
               </CardHeader>
               <CardBody>
                 <Todo />
+                <thead>
+                  <tr>
+                    <th>Tarefas</th>
+                  </tr>
+                </thead>
               </CardBody>
             </Card>
           </GridItem>

@@ -23,11 +23,6 @@ export default props => {
 
     return (
         <table className='table'>
-            <thead>
-                <tr>
-                    <th>Tarefas</th>
-                </tr>
-            </thead>
             <tbody>
                 {renderRows()}
             </tbody>
