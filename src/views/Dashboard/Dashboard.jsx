@@ -190,19 +190,7 @@ class Dashboard extends React.Component {
         </GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
-            <Card>
-              <CardHeader color="danger">
-                <h4 className={classes.cardTitleWhite}>Adicionar Tarefas</h4>
-              </CardHeader>
-              <CardBody xs={12} sm={12} md={6}>
-                <Todo />
-                <thead>
-                  <tr>
-                    <th>Tarefas</th>
-                  </tr>
-                </thead>
-              </CardBody>
-            </Card>
+            <Todo />
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
             <Card>

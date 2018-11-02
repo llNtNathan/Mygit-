@@ -1,7 +1,12 @@
 import React from 'react'
 //import Grid from 'views/template/grid'
-import Grid from "@material-ui/core/Grid";
-import 'views/template/custom.css'
+import GridContainer from "components/Grid/GridContainer.jsx";
+
+import GridItem from "components/Grid/GridItem.jsx";
+import Card from "components/Card/Card.jsx";
+import CardHeader from "components/Card/CardHeader.jsx";
+import CardBody from "components/Card/CardBody.jsx";
+import Icon from '@material-ui/core/Icon';
 //import IconButton from 'views/template/iconButton'
 import Button from "components/CustomButtons/Button.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
@@ -17,24 +22,41 @@ export default props => {
     }
 
     return (
-        <div className='todoForm'>
-            <Grid>
-                <CustomInput id='description' className='form-control'
-                    placeholder='Adicione uma tarefa'
-                    onChange={props.handleChange}
-                    onKeyUp={keyHandler}
-                    value={props.description} />
-                <Button color="primary"
-                    onClick={props.handleAdd}>
-                </Button>
-                {/*<Button color="primary"
-                    onClick={props.handleSearch}>
-                    
-                </Button>*/}
-                <Button color="primary"
-                    onClick={props.handleClear}>
-                </Button>
-            </Grid>
+        <div>
+            <Card>
+                    <CardHeader color="primary">
+                        <p>Pesquisar cliente</p>
+                    </CardHeader>
+                    <CardBody>
+                        <GridContainer>
+                            <GridItem xs={12} sm={12} md={6}>
+                                <CustomInput id='description' className='form-control'
+                                    placeholder='Adicione uma tarefa'
+                                    onChange={props.handleChange}
+                                    onKeyUp={keyHandler}
+                                    value={props.description}
+                                    labelText="Tarefa"
+                                    formControlProps={{
+                                    fullWidth: true
+                                    }}
+                                />
+                            </GridItem> 
+                            <GridItem>
+                            <Button color="primary"
+                                 onClick={props.handleAdd}>
+                                 <Icon>add</Icon>
+                            </Button>
+                            <Button color="primary"
+                                onClick={props.handleClear}>
+                                <Icon>layers_clear</Icon>
+                            </Button>
+                            {/*<Button color="primary"
+                    '           onClick={props.handleSearch}>
+                            </Button>*/}
+                            </GridItem>
+                        </GridContainer>
+                    </CardBody>
+                </Card>
         </div> 
     )
 }
