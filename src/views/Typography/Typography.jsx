@@ -10,7 +10,7 @@ import Button from "components/CustomButtons/Button.jsx";
 import CardBody from "components/Card/CardBody.jsx"; 
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
-import Todo from 'views/todo/todo.jsx';
+import Todo from 'views/Lista/todo.jsx';
 //import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 //import headerLinksStyle from "assets/jss/material-dashboard-react/components/headerLinksStyle.jsx";

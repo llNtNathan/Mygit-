@@ -194,7 +194,7 @@ class Dashboard extends React.Component {
               <CardHeader color="danger">
                 <h4 className={classes.cardTitleWhite}>Adicionar Tarefas</h4>
               </CardHeader>
-              <CardBody>
+              <CardBody xs={12} sm={12} md={6}>
                 <Todo />
                 <thead>
                   <tr>

@@ -9,10 +9,12 @@
 
 .tableActions {
     width: 105px;
+    
 }
 
 .todoForm {
     padding-bottom: 60px;
-    height: 80px;
+    width: 100px;
+    padding: 40px;
 
 }

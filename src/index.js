@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 import "assets/css/material-dashboard-react.css?v=1.5.0";
+import 'views/template/custom.css';
 
 import indexRoutes from "routes/index.jsx";
 

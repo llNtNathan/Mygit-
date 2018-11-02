@@ -24,16 +24,18 @@ export default props => {
                     onChange={props.handleChange}
                     onKeyUp={keyHandler}
                     value={props.description} />
-                <Button color="primary"
-                    onClick={props.handleAdd}>
-                </Button>
                 {/*<Button color="primary"
-                    onClick={props.handleSearch}>
+                    onClick={props.handleAdd}>
                     
                 </Button>*/}
                 <Button color="primary"
-                    onClick={props.handleClear}>
+                    onClick={props.handleSearch}>
                 </Button>
+                    
+                {/*</Button>
+                <Button color="primary"
+                    onClick={props.handleClear}>
+                </Button>*/}
             </Grid>
         </div> 
     )
